@@ -10,7 +10,7 @@ class Basket extends Model
 
 
 
-    public function getTableName()
+    public static function getTableName()
     {
         return "basket";
     }

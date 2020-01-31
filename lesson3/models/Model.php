@@ -7,12 +7,15 @@ use app\interfaces\IModel;
 
 abstract class Model implements IModel
 {
-	protected $db;
-
-	public function __construct()
-	{
-		$this->db = Db::getInstance();
-	}
+//	/**
+//	 * @var Db
+//	 */
+//	protected $db;
+//
+//	public function __construct()
+//	{
+//		$this->db = Db::getInstance();
+//	}
 
 //	public function getOne($id)
 //	{
@@ -57,18 +60,16 @@ abstract class Model implements IModel
 		$tableName = $this->getTableName();
 		foreach ($this as $key => $value) {
 			if ($key !== "id" && $key !== "db") {
-				$fields[] = "$key";
+				$fields[] = "`$key`";
 				$values[":{$key}"] = $value;
 			}
 		}
 		$fields = implode(", ", $fields);
 		$params = implode(", ", array_keys($values));
-
-		$sql = "INSERT INTO {$tableName} ({$fields}) VALUES ({$params})";
+		$sql = "INSERT INTO `{$tableName}` ({$fields}) VALUES ({$params})";
 		var_dump($sql);
 		Db::getInstance()->execute($sql, $values);
 		$this->id = Db::getInstance()->lastInsertId();
-
 	}
 
 	public function delete()
@@ -84,5 +85,5 @@ abstract class Model implements IModel
 
 	}
 
-	abstract public function getTableName();
+	abstract public static function getTableName();
 }

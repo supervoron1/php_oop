@@ -6,7 +6,6 @@ use app\traits\Tsingletone;
 
 class Db
 {
-
 	private $config = [
 		'driver' => 'mysql',
 		'host' => 'localhost',
@@ -82,6 +81,6 @@ class Db
 
 	public function lastInsertId()
 	{
-		return $this->getConnection()->lastInsertId();
+		return $this->connection->lastInsertId();
 	}
 }
