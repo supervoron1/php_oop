@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+}
+
+.also.btn {
+    box-shadow: none;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: 0;
+}
+
+.card-body img {
+    vertical-align: super;
+}
