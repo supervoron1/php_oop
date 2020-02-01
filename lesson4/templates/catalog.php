@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Каталог продуктов</h2>
-    <div class="catalog d-flex flex-wrap justify-content-md-between mt-4">
+    <div class="catalog d-flex flex-wrap justify-content-center justify-content-md-between mt-4">
 			<? foreach ($catalog as $item): ?>
           <div class="card mb-3" style="width: 15rem;">
               <div class="card-body text-center p-3">

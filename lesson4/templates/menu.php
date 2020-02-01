@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="container navbar-nav">
-            <div class="navbar-nav mr-auto">
+            <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Главная <span
                         class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="/product/catalog/">Каталог</a>
