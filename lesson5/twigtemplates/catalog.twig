@@ -1,0 +1,12 @@
+<h2>Каталог продуктов</h2>
+{% for item in catalog %}
+    <div class="catalog__item" id="{{ item.id }}">
+        <a href="/product/card/?id={{ item.id }}/">
+            <b class="nameItem" id="{{ item.id }}">{{ item.name }}</b><br>
+            <img id="{{ item.id }}" width="250" src="/img/{{ item.image }}" class="imgItem" alt="">
+        </a><br>
+        Цена: {{ item.price }}<br>
+        <button class="buy" id="{{ item.id }}">Купить</button><hr>
+    </div>
+{% endfor %}
+<a href="/product/catalog/?page={{ page }}">Показать еще</a>
