@@ -57,7 +57,7 @@ abstract class DbModel extends Model
 			$columns[] .= "`" . $key . "` = :" . $key;
 			$this->props[$key] = false;
 		}
-		$columns = implode(", ", $colums);
+		$columns = implode(", ", $columns);
 		$params[':id'] = $this->id;
 		$tableName = static::getTableName();
 		$sql = "UPDATE `{$tableName}` SET {$columns} WHERE `id` = :id";
